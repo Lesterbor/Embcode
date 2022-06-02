@@ -1,52 +1,85 @@
-#include "reg52.h"			 //´ËÎÄ¼şÖĞ¶¨ÒåÁËµ¥Æ¬»úµÄÒ»Ğ©ÌØÊâ¹¦ÄÜ¼Ä´æÆ÷
+/* USER CODE BEGIN Header */
+/**
+  ******************************************************************************
+  * @file           : ElectronicOrgan.c
+  * @brief          : ElectronicOrgan program body
+  * @author         : Lesterbor
+  * @time	    : 2020-02-21
+  *
+  ******************************************************************************
+  * @attention
+  *
+  *
+  *
+  ******************************************************************************
+  */
+/* USER CODE END Header */
+/* Private includes ----------------------------------------------------------*/
+/* USER CODE BEGIN Includes */
 
-typedef unsigned int uint;	  //¶ÔÊı¾İÀàĞÍ½øĞĞÉùÃ÷¶¨Òå
+	#include "reg52.h" //æ­¤æ–‡ä»¶ä¸­å®šä¹‰äº†å•ç‰‡æœºçš„ä¸€äº›ç‰¹æ®ŠåŠŸèƒ½å¯„å­˜å™¨
+
+/* USER CODE END Includes */
+/* Private typedef -----------------------------------------------------------*/
+/* USER CODE BEGIN PT */
+
+typedef unsigned int uint;//å¯¹æ•°æ®ç±»å‹è¿›è¡Œå£°æ˜å®šä¹‰
 typedef unsigned char uchar;
 
-#define GPIO_KEY P1				//¶ÔP1¿Ú½øĞĞºê¶¨Òå
+#define GPIO_KEY P1	//å¯¹P1å£è¿›è¡Œå®å®šä¹‰
 
-sbit beep=P1^5;						//ºê¶¨Òå·äÃùÆ÷½Ó¿Ú
+sbit beep=P1^5;		//å®å®šä¹‰èœ‚é¸£å™¨æ¥å£
 
+char KeyValue=-1;	//ç”¨æ¥å­˜æ”¾è¯»å–åˆ°çš„é”®å€¼
+
+uint pwm[16]={10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160};//é€šè¿‡å»¶æ—¶äº§ç”Ÿä¸åŒçš„é¢‘ç‡ä¿¡å·
+
+/* USER CODE END PT */
+
+//å‡½æ•°å£°æ˜
 void KeyDown(void);
 void delay(uint i);
-void BEEP(uint a);				//º¯ÊıÉùÃ÷
+void BEEP(uint a);
 	
-char KeyValue=-1;	//ÓÃÀ´´æ·Å¶ÁÈ¡µ½µÄ¼üÖµ
 
-uint pwm[16]={10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160};//Í¨¹ıÑÓÊ±²úÉú²»Í¬µÄÆµÂÊĞÅºÅ
+/* Function definition -------------------------------------------------------*/
+/* USER CODE BEGIN FD */
 
-//Ö÷º¯Êı
-void main(){							
+/**
+  * @Function name  main
+  * @Introduce      ä¸»å‡½æ•°						
+  * @Return 	    NULL
+  */
+  void main(){							
 	while(1){
 		KeyValue=-1;
 		KeyDown();
-		if(KeyValue!=-1)
-		{
+		if(KeyValue!=-1){
 			BEEP(pwm[KeyValue]);		
 		}
 	}
-}
+  }
 
-//°´¼üÉ¨Ãèº¯Êı
-void KeyDown(void){
+/**
+  * @Function name  KeyDown
+  * @Introduce      æŒ‰é”®æ‰«æå‡½æ•°						
+  * @Return 	    NULL
+  */
+  void KeyDown(void){
 	char a=0;
 	GPIO_KEY=0x0f;
-	if(GPIO_KEY!=0x0f)
-	{
+	if(GPIO_KEY!=0x0f){
 		delay(1000);
-		if(GPIO_KEY!=0x0f)
-		{	
+		if(GPIO_KEY!=0x0f){	
 			GPIO_KEY=0X0F;
-			switch(GPIO_KEY)
-			{
+			switch(GPIO_KEY){
 				case(0X07):	KeyValue=0;break;
 				case(0X0b):	KeyValue=1;break;
 				case(0X0d): KeyValue=2;break;
 				case(0X0e):	KeyValue=3;break;
 			}
 			GPIO_KEY=0XF0;
-			switch(GPIO_KEY)
-			{
+			switch(GPIO_KEY){
 				case(0X70):	KeyValue=KeyValue;break;
 				case(0Xb0):	KeyValue=KeyValue+4;break;
 				case(0Xd0): KeyValue=KeyValue+8;break;
@@ -55,16 +88,17 @@ void KeyDown(void){
 			
 		}
 	}
-	while((a<50)&&(GPIO_KEY!=0xf0))
-	{
+	while((a<50)&&(GPIO_KEY!=0xf0)){
 		delay(100);
 		a++;
 	}
 }
-
-//·äÃùÆ÷ÃùÏìº¯Êı
-void BEEP(uint a){			
-
+/**
+  * @Function name  BEEP
+  * @Introduce      èœ‚é¸£å™¨é¸£å“å‡½æ•°						
+  * @Return 	    NULL
+  */
+  void BEEP(uint a){			
 	uint b=0;
 	beep=0;
 	while(b<450){
@@ -72,10 +106,13 @@ void BEEP(uint a){
 		delay(a);
 		b++;
 	}
-		
-}
-
-//ÑÓÊ±º¯Êı
-void delay(uint i){
+ 		
+  }
+/**
+  * @Function name  delay
+  * @Introduce      å»¶æ—¶å‡½æ•°					
+  * @Return 	    NULL
+  */
+  void delay(uint i){
 	while(i--);	
-}
+  }
