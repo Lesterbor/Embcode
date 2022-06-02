@@ -6,7 +6,7 @@
   *                   This file provides code for the configuration
   *                   of the Music instances
   * @author         : Lesterbor
-  *	@time						: 2021-10-12
+  *	@time			: 2021-10-12
   ******************************************************************************
   * @attention
   *
@@ -25,7 +25,6 @@
 
 	#include "main.h"
 	#include "BSP_PPL.h"
-
 	
 /* USER CODE END Includes */
 
@@ -39,17 +38,12 @@
 	#define	One_TWO_Beat		2
 	#define	One_FOUR_Beat		4
 
-
-
-
-
-	
 /* USER CODE END PT */
 
 /* Exported functions prototypes ---------------------------------------------*/
 /* USER CODE BEGIN EFP */
-		void MUSIC_Analysis(void);
 
+		void MUSIC_Analysis(void);
 
 /* USER CODE END EFP */
 
