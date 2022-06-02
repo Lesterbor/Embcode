@@ -4,7 +4,7 @@
   * @file           : Music.c
   * @brief          : Music program body
   * @author         : Lesterbor
-  * @time	    : 2022-01-15
+  *	@time			: 2022-01-15
   *
   ******************************************************************************
   * @attention
@@ -35,7 +35,7 @@
 //	
 ////中速代表乐曲速度术语里的Moderato，或称中板，每分钟在88到104拍。
 ////中速 每分钟100拍 一拍600ms
-//	
+//两只老虎简谱，没有细调
 //	uint16_t Music_Two_Tigers[][3]={
 //		{0,0,570},
 //		{1,Alto,One_Beat},
@@ -298,12 +298,9 @@ uint16_t Music_Lone_Brave[][3]={
 	{2,Alto,One_TWO_Beat}  ,{3,Alto,One_FOUR_Beat},{5,Alto,One_FOUR_Beat}  ,{3,Alto,One_FOUR_Beat} ,
 	{5,Alto,One_FOUR_Beat} ,{3,Alto,One_FOUR_Beat},
 	
-	
 	//第四十小节
 	{2,Alto,One_TWO_Beat}  ,{3,Alto,One_FOUR_Beat},{2,Alto,One_TWO_Beat}   ,{3,Alto,One_FOUR_Beat} ,
 	{2,Alto,One_Beat}      ,{0,Alto,One_TWO_Beat} ,{1,Alto,One_FOUR_Beat}  ,{2,Alto,One_FOUR_Beat} ,
-	
-	
 	
 	
 	//第四十一小节
@@ -461,48 +458,14 @@ uint16_t Music_Lone_Brave[][3]={
 	
 	//第四十七小节
 	{1,Teble,One_TWO_Beat} ,{0,Alto,One_Beat}      ,{0,Alto,One_Beat}      ,{0,Alto,One_Beat}      ,
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	{0,Alto,One_Beat} ,
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 };
 
 
-
-
 /* USER CODE END PT */
-	
-
 /* Function definition -------------------------------------------------------*/
 /* USER CODE BEGIN FD */
-
 /**
   * @Function name  MUSIC_Begin
   * @Introduce  		开始播放音乐						
@@ -516,11 +479,7 @@ uint16_t Music_Lone_Brave[][3]={
 			BSP_Buzzer_SetFrequency(Tone_Index[Music_Lone_Brave[i][0]][Music_Lone_Brave[i][1]]);
 			HAL_Delay(MusicSpeed/Music_Lone_Brave[i][2]);
 		}
-		
-		
-		
 	}
 	
 /* USER CODE END FD */
-
 /************************ (C) COPYRIGHT Lesterbor *****END OF FILE****/
