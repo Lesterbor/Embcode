@@ -4,7 +4,7 @@
   * @file           : ElectronicOrgan.c
   * @brief          : ElectronicOrgan program body
   * @author         : Lesterbor
-  * @time	    : 2020-02-21
+  * @time	    	: 2020-02-21
   *
   ******************************************************************************
   * @attention
@@ -17,31 +17,34 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
-	#include "reg52.h" //此文件中定义了单片机的一些特殊功能寄存器
+	#include "reg52.h"
 
 /* USER CODE END Includes */
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PT */
 
-typedef unsigned int uint;//对数据类型进行声明定义
-typedef unsigned char uchar;
+	#define GPIO_KEY P1
+	
+	typedef unsigned int uint;
+	typedef unsigned char uchar;
 
-#define GPIO_KEY P1	//对P1口进行宏定义
+	sbit beep=P1^5;
 
-sbit beep=P1^5;		//宏定义蜂鸣器接口
+	char KeyValue=-1;
 
-char KeyValue=-1;	//用来存放读取到的键值
-
-uint pwm[16]={10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160};//通过延时产生不同的频率信号
+	//通过延时产生不同的频率信号
+	uint pwm[16]={10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160};
 
 /* USER CODE END PT */
 
-//函数声明
-void KeyDown(void);
-void delay(uint i);
-void BEEP(uint a);
-	
+/* Exported functions prototypes ---------------------------------------------*/
+/* USER CODE BEGIN EFP */
 
+	void KeyDown(void);
+	void delay(uint i);
+	void BEEP(uint a);
+
+/* USER CODE END EFP */
 /* Function definition -------------------------------------------------------*/
 /* USER CODE BEGIN FD */
 
