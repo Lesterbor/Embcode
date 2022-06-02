@@ -3,9 +3,9 @@
   ******************************************************************************
   * @file           : Music.c
   * @brief          : Music program body
-	* @author         : Lesterbor
-	*	@time						:	2022-01-15
-	*
+  * @author         : Lesterbor
+  * @time	    : 2022-01-15
+  *
   ******************************************************************************
   * @attention
   *
@@ -14,16 +14,12 @@
   ******************************************************************************
   */
 /* USER CODE END Header */
-
-
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
 	#include "Music.h"
 
 /* USER CODE END Includes */
-
-
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PT */
 	uint16_t Tone_Index[8][3]={
@@ -37,8 +33,9 @@
 		{494,988,1976}		
 	};
 //	
-////ÖĞËÙ´ú±íÀÖÇúËÙ¶ÈÊõÓïÀïµÄModerato£¬»ò³ÆÖĞ°å£¬Ã¿·ÖÖÓÔÚ88µ½104ÅÄ¡£
-////ÖĞËÙ Ã¿·ÖÖÓ100ÅÄ Ò»ÅÄ600ms
+////ä¸­é€Ÿä»£è¡¨ä¹æ›²é€Ÿåº¦æœ¯è¯­é‡Œçš„Moderatoï¼Œæˆ–ç§°ä¸­æ¿ï¼Œæ¯åˆ†é’Ÿåœ¨88åˆ°104æ‹ã€‚
+////ä¸­é€Ÿ æ¯åˆ†é’Ÿ100æ‹ ä¸€æ‹600ms
+//	
 //	uint16_t Music_Two_Tigers[][3]={
 //		{0,0,570},
 //		{1,Alto,One_Beat},
@@ -98,9 +95,9 @@
 //		
 
 //	};
-//ÖĞËÙ Ã¿·ÖÖÓ65ÅÄ Ò»ÅÄ920ms
+//ä¸­é€Ÿ æ¯åˆ†é’Ÿ65æ‹ ä¸€æ‹920ms
 uint16_t Music_Lone_Brave[][3]={
-	//ÇúĞÅÏ¢
+	//æ›²ä¿¡æ¯
 	{0,0,920},
 	
 //	#define Bass		0
@@ -111,358 +108,358 @@ uint16_t Music_Lone_Brave[][3]={
 //	#define	One_TWO_Beat		2
 //	#define	One_FOUR_Beat		4
 	
-	//µÚÒ»Ğ¡½Ú
+	//ç¬¬ä¸€å°èŠ‚
 	{2,Alto,One_TWO_Beat}  ,{7,Bass,One_TWO_Beat}  ,{1,Alto,One_TWO_Beat}  ,{6,Bass,One_TWO_Beat}  ,
 	{2,Alto,One_TWO_Beat}  ,{7,Bass,One_TWO_Beat}  ,{1,Alto,One_TWO_Beat}  ,{6,Bass,One_TWO_Beat}  ,
 	
-	//µÚ¶şĞ¡½Ú	
+	//ç¬¬äºŒå°èŠ‚	
 	{2,Alto,One_TWO_Beat}  ,{7,Bass,One_TWO_Beat}  ,{1,Alto,One_TWO_Beat}  ,{6,Bass,One_TWO_Beat}  ,
 	{2,Alto,One_TWO_Beat}  ,{7,Bass,One_TWO_Beat}  ,{1,Alto,One_TWO_Beat}  ,{6,Bass,One_TWO_Beat}  ,
 	
-	//µÚÈıĞ¡½Ú	
+	//ç¬¬ä¸‰å°èŠ‚	
 	{2,Alto,One_TWO_Beat}  ,{7,Bass,One_TWO_Beat}  ,{1,Alto,One_TWO_Beat}  ,{6,Bass,One_TWO_Beat}  ,
 	{2,Alto,One_TWO_Beat}  ,{7,Bass,One_TWO_Beat}  ,{1,Alto,One_TWO_Beat}  ,{6,Bass,One_TWO_Beat}  ,
 	
-	//µÚËÄĞ¡½Ú	
+	//ç¬¬å››å°èŠ‚	
 	{2,Alto,One_TWO_Beat}  ,{7,Bass,One_TWO_Beat}  ,{1,Alto,One_TWO_Beat}  ,{6,Bass,One_TWO_Beat}  ,
 	{2,Alto,One_TWO_Beat}  ,{7,Bass,One_TWO_Beat}  ,{1,Alto,One_TWO_Beat}  ,{6,Bass,One_TWO_Beat}  ,
 	
-	//µÚÎåĞ¡½Ú	
+	//ç¬¬äº”å°èŠ‚	
 	{2,Alto,One_TWO_Beat}  ,{7,Bass,One_TWO_Beat}  ,{1,Alto,One_TWO_Beat}  ,{6,Bass,One_TWO_Beat}  ,
 	{2,Alto,One_TWO_Beat}  ,{7,Bass,One_TWO_Beat}  ,{1,Alto,One_TWO_Beat}  ,{6,Bass,One_TWO_Beat}  ,
 	
-	//µÚÁùĞ¡½Ú	
+	//ç¬¬å…­å°èŠ‚	
 	{3,Alto,One_Beat}		   ,{3,Alto,One_Beat}		  ,{0,Alto,One_Beat}       ,{0,Alto,One_FOUR_Beat} ,
 	{1,Alto,One_FOUR_Beat} ,{2,Alto,One_FOUR_Beat},{1,Alto,One_FOUR_Beat}  ,
 	
-	//µÚÆßĞ¡½Ú
+	//ç¬¬ä¸ƒå°èŠ‚
 	{3,Alto,One_Beat}      ,{3,Alto,One_Beat}			,{0,Alto,One_TWO_Beat}	 ,{1,Alto,One_FOUR_Beat} ,
 	{2,Alto,One_FOUR_Beat} ,{1,Alto,One_FOUR_Beat},{2,Alto,One_FOUR_Beat}  ,{3,Alto,One_FOUR_Beat} ,
 	
-	//µÚ°ËĞ¡½Ú
+	//ç¬¬å…«å°èŠ‚
 	{6,Bass,One_TWO_Beat}  ,{1,Alto,One_FOUR_Beat},{6,Bass,One_TWO_Beat}	 ,{1,Alto,One_FOUR_Beat} ,
 	{6,Bass,One_TWO_Beat}  ,{1,Alto,One_FOUR_Beat},{2,Alto,One_TWO_Beat}   ,{1,Alto,One_TWO_Beat}  ,
 	
-	//µÚ¾ÅĞ¡½Ú
+	//ç¬¬ä¹å°èŠ‚
 	{7,Bass,One_TWO_Beat}  ,{7,Bass,One_FOUR_Beat},{0,Alto,One_TWO_Beat}	 ,{0,Alto,One_FOUR_Beat} ,
 
-	//µÚÊ®Ğ¡½Ú
+	//ç¬¬åå°èŠ‚
 	{3,Alto,One_Beat}		   ,{3,Alto,One_Beat}		  ,{0,Alto,One_Beat}       ,{0,Alto,One_FOUR_Beat} ,
 	{1,Alto,One_FOUR_Beat} ,{2,Alto,One_FOUR_Beat},{1,Alto,One_FOUR_Beat}  ,
 	
-	//µÚÊ®Ò»Ğ¡½Ú
+	//ç¬¬åä¸€å°èŠ‚
 	{3,Alto,One_Beat}      ,{3,Alto,One_Beat}			,{0,Alto,One_TWO_Beat}	 ,{1,Alto,One_FOUR_Beat} ,
 	{2,Alto,One_FOUR_Beat} ,{1,Alto,One_FOUR_Beat},{2,Alto,One_FOUR_Beat}  ,{3,Alto,One_FOUR_Beat} ,
 	
-	//µÚÊ®¶şĞ¡½Ú
+	//ç¬¬åäºŒå°èŠ‚
 	{6,Bass,One_TWO_Beat}  ,{1,Alto,One_FOUR_Beat},{6,Bass,One_TWO_Beat}	 ,{1,Alto,One_FOUR_Beat} ,
 	{6,Bass,One_TWO_Beat}  ,{1,Alto,One_FOUR_Beat},{3,Alto,One_TWO_Beat}   ,{2,Alto,One_TWO_Beat}  ,
 		
-	//µÚÊ®ÈıĞ¡½Ú
+	//ç¬¬åä¸‰å°èŠ‚
 	{7,Bass,One_TWO_Beat}  ,{7,Bass,One_FOUR_Beat},{0,Alto,One_TWO_Beat}	 ,{0,Alto,One_FOUR_Beat} ,
 	
-	//µÚÊ®ËÄĞ¡½Ú
+	//ç¬¬åå››å°èŠ‚
 	{6,Bass,One_FOUR_Beat} ,{1,Alto,One_FOUR_Beat},{6,Alto,One_TWO_Beat}	 ,{6,Alto,One_FOUR_Beat} ,
-	{0,Alto,20 /*Ğ¡ÏÎ½Ó*/} ,{6,Alto,One_FOUR_Beat},{6,Alto,One_FOUR_Beat}  ,{5,Alto,One_FOUR_Beat} ,
+	{0,Alto,20 /*å°è¡”æ¥*/} ,{6,Alto,One_FOUR_Beat},{6,Alto,One_FOUR_Beat}  ,{5,Alto,One_FOUR_Beat} ,
 	{6,Alto,One_TWO_Beat}  ,{6,Alto,One_FOUR_Beat},{5,Alto,One_FOUR_Beat}  ,{6,Alto,One_FOUR_Beat} ,
 	{5,Alto,One_FOUR_Beat} ,{6,Alto,One_FOUR_Beat},{5,Alto,One_FOUR_Beat}  ,
 	
-	//µÚÊ®ÎåĞ¡½Ú
-	{3,Alto,One_FOUR_Beat} ,{3,Alto,One_TWO_Beat} ,{3,Alto,One_Beat}	     ,{0,Alto,20 /*Ğ¡ÏÎ½Ó*/} ,
+	//ç¬¬åäº”å°èŠ‚
+	{3,Alto,One_FOUR_Beat} ,{3,Alto,One_TWO_Beat} ,{3,Alto,One_Beat}	     ,{0,Alto,20 /*å°è¡”æ¥*/} ,
 	{0,Alto,One_Beat}      ,{0,Alto,One_TWO_Beat} ,{6,Bass,One_FOUR_Beat}  ,{1,Alto,One_FOUR_Beat} ,
 	
-	//µÚÊ®ÁùĞ¡½Ú
-	{6,Alto,One_TWO_Beat}  ,{6,Alto,One_FOUR_Beat},{0,Alto,20 /*Ğ¡ÏÎ½Ó*/}  ,{6,Alto,One_FOUR_Beat} ,
+	//ç¬¬åå…­å°èŠ‚
+	{6,Alto,One_TWO_Beat}  ,{6,Alto,One_FOUR_Beat},{0,Alto,20 /*å°è¡”æ¥*/}  ,{6,Alto,One_FOUR_Beat} ,
 	{5,Alto,One_FOUR_Beat} ,{6,Alto,One_FOUR_Beat},{5,Alto,One_FOUR_Beat}  ,{7,Alto,One_TWO_Beat}  ,
-	{7,Alto,One_FOUR_Beat} ,{0,Alto,20 /*Ğ¡ÏÎ½Ó*/},{7,Alto,One_FOUR_Beat}  ,{6,Alto,One_FOUR_Beat} ,
+	{7,Alto,One_FOUR_Beat} ,{0,Alto,20 /*å°è¡”æ¥*/},{7,Alto,One_FOUR_Beat}  ,{6,Alto,One_FOUR_Beat} ,
 	{7,Alto,One_TWO_Beat}  ,
 	
-	//µÚÊ®ÆßĞ¡½Ú
+	//ç¬¬åä¸ƒå°èŠ‚
 	{7,Alto,One_FOUR_Beat} ,{6,Alto,One_TWO_Beat} ,{3,Alto,One_FOUR_Beat}  ,{3,Alto,One_TWO_Beat}  ,
 	{3,Alto,One_TWO_Beat}  ,{0,Alto,One_FOUR_Beat},{3,Alto,One_FOUR_Beat}  ,{5,Alto,One_FOUR_Beat} ,
 	{3,Alto,One_FOUR_Beat} ,
 
-	//µÚÊ®°ËĞ¡½Ú
+	//ç¬¬åå…«å°èŠ‚
 	{2,Alto,One_TWO_Beat}  ,{3,Alto,One_FOUR_Beat},{2,Alto,One_TWO_Beat}   ,{3,Alto,One_FOUR_Beat} ,
 	{2,Alto,One_TWO_Beat}  ,{3,Alto,One_FOUR_Beat},{5,Alto,One_FOUR_Beat}  ,{3,Alto,One_FOUR_Beat} ,
 	{5,Alto,One_FOUR_Beat} ,{3,Alto,One_FOUR_Beat},
 	
-	//µÚÊ®¾ÅĞ¡½Ú
+	//ç¬¬åä¹å°èŠ‚
 	{2,Alto,One_TWO_Beat}  ,{3,Alto,One_FOUR_Beat},{2,Alto,One_TWO_Beat}   ,{3,Alto,One_FOUR_Beat} ,
 	{2,Alto,One_Beat}      ,{0,Alto,One_TWO_Beat} ,{1,Alto,One_FOUR_Beat}  ,{2,Alto,One_FOUR_Beat} ,
 	
-	//µÚ¶şÊ®Ğ¡½Ú
+	//ç¬¬äºŒåå°èŠ‚
 	{3,Alto,One_TWO_Beat}  ,{6,Bass,One_TWO_Beat} ,{1,Alto,One_TWO_Beat}   ,{3,Alto,One_TWO_Beat}  ,
 	{2,Alto,One_TWO_Beat}  ,{3,Alto,One_FOUR_Beat},{2,Alto,One_FOUR_Beat}  ,{1,Alto,One_FOUR_Beat} ,
 	{1,Alto,One_TWO_Beat}  ,
 	
-	//µÚ¶şÊ®Ò»Ğ¡½Ú
+	//ç¬¬äºŒåä¸€å°èŠ‚
 	{6,Bass,One_Beat}      ,{6,Bass,One_Beat} 	  ,{0,Alto,One_Beat}       ,{0,Alto,One_TWO_Beat}  ,
 	{6,Alto,One_FOUR_Beat} ,{7,Alto,One_FOUR_Beat},
 	
-	//µÚ¶şÊ®¶şĞ¡½Ú
+	//ç¬¬äºŒåäºŒå°èŠ‚
 	{1,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{7,Alto,One_FOUR_Beat} ,{1,Teble,One_FOUR_Beat},
-	{0,Alto,306 /*Ğ¡ÏÎ½Ó*/},{1,Teble,One_TWO_Beat} ,{0,Alto,306 /*Ğ¡ÏÎ½Ó*/},{1,Teble,One_FOUR_Beat},
+	{0,Alto,306 /*å°è¡”æ¥*/},{1,Teble,One_TWO_Beat} ,{0,Alto,306 /*å°è¡”æ¥*/},{1,Teble,One_FOUR_Beat},
 	{7,Alto,One_FOUR_Beat} ,{1,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{7,Alto,One_FOUR_Beat} ,
-	{1,Teble,One_FOUR_Beat},{0,Alto,306 /*Ğ¡ÏÎ½Ó*/},{1,Teble,One_TWO_Beat} ,{0,Alto,306 /*Ğ¡ÏÎ½Ó*/},
+	{1,Teble,One_FOUR_Beat},{0,Alto,306 /*å°è¡”æ¥*/},{1,Teble,One_TWO_Beat} ,{0,Alto,306 /*å°è¡”æ¥*/},
 	{1,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},
 	
-	//µÚ¶şÊ®ÈıĞ¡½Ú
+	//ç¬¬äºŒåä¸‰å°èŠ‚
 	{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},
-	{3,Teble,One_TWO_Beat} ,{0,Alto,306 /*Ğ¡ÏÎ½Ó*/},{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},
+	{3,Teble,One_TWO_Beat} ,{0,Alto,306 /*å°è¡”æ¥*/},{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},
 	{3,Teble,One_TWO_Beat} ,{5,Teble,One_TWO_Beat} ,{3,Teble,One_TWO_Beat} ,{6,Alto,One_FOUR_Beat} ,
 	{7,Alto,One_FOUR_Beat} ,
 	
-	//µÚ¶şÊ®ËÄĞ¡½Ú
+	//ç¬¬äºŒåå››å°èŠ‚
 	{1,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{7,Alto,One_FOUR_Beat} ,{1,Teble,One_FOUR_Beat},
-	{0,Alto,306 /*Ğ¡ÏÎ½Ó*/},{1,Teble,One_TWO_Beat} ,{0,Alto,306 /*Ğ¡ÏÎ½Ó*/},{1,Teble,One_FOUR_Beat},
+	{0,Alto,306 /*å°è¡”æ¥*/},{1,Teble,One_TWO_Beat} ,{0,Alto,306 /*å°è¡”æ¥*/},{1,Teble,One_FOUR_Beat},
 	{7,Alto,One_FOUR_Beat} ,{1,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{7,Alto,One_FOUR_Beat} ,
-	{1,Teble,One_FOUR_Beat},{0,Alto,306 /*Ğ¡ÏÎ½Ó*/},{1,Teble,One_TWO_Beat} ,{0,Alto,306 /*Ğ¡ÏÎ½Ó*/},
+	{1,Teble,One_FOUR_Beat},{0,Alto,306 /*å°è¡”æ¥*/},{1,Teble,One_TWO_Beat} ,{0,Alto,306 /*å°è¡”æ¥*/},
 	{1,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},
 	
-	//µÚ¶şÊ®ÎåĞ¡½Ú
+	//ç¬¬äºŒåäº”å°èŠ‚
 	{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},
-	{3,Teble,One_TWO_Beat} ,{0,Alto,306 /*Ğ¡ÏÎ½Ó*/},{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},
+	{3,Teble,One_TWO_Beat} ,{0,Alto,306 /*å°è¡”æ¥*/},{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},
 	{3,Teble,One_TWO_Beat} ,{5,Teble,One_TWO_Beat} ,{3,Teble,One_TWO_Beat} ,{5,Teble,One_TWO_Beat} ,
 	
-	//µÚ¶şÊ®ÁùĞ¡½Ú
+	//ç¬¬äºŒåå…­å°èŠ‚
 	{3,Teble,One_TWO_Beat} ,{5,Teble,One_FOUR_Beat},{3,Teble,One_TWO_Beat} ,{5,Teble,One_FOUR_Beat},
 	{3,Teble,One_FOUR_Beat},{5,Teble,One_FOUR_Beat},{6,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},
-	{5,Teble,One_TWO_Beat} ,{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{5,Teble,One_TWO_Beat} ,
+	{5,Teble,One_TWO_Beat} ,{0,Alto,184 /*å°è¡”æ¥*/},{5,Teble,One_TWO_Beat} ,
 	
-	//µÚ¶şÊ®ÆßĞ¡½Ú
+	//ç¬¬äºŒåä¸ƒå°èŠ‚
 	{3,Teble,One_TWO_Beat} ,{5,Teble,One_FOUR_Beat},{3,Teble,One_TWO_Beat} ,{5,Teble,One_FOUR_Beat},
 	{3,Teble,One_FOUR_Beat},{5,Teble,One_FOUR_Beat},{6,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},
-	{5,Teble,One_TWO_Beat} ,{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{5,Teble,One_TWO_Beat} ,{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},
+	{5,Teble,One_TWO_Beat} ,{0,Alto,184 /*å°è¡”æ¥*/},{5,Teble,One_TWO_Beat} ,{0,Alto,184 /*å°è¡”æ¥*/},
 	{5,Teble,One_TWO_Beat} ,
 	
-	//µÚ¶şÊ®°ËĞ¡½Ú
-	//{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{2,Teble,One_TWO_Beat} ,
-	//{1,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},
-	//{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{2,Teble,One_TWO_Beat} ,{1,Teble,One_FOUR_Beat},{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{1,Teble,One_FOUR_Beat},
-	{3,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},
+	//ç¬¬äºŒåå…«å°èŠ‚
+	//{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{0,Alto,184 /*å°è¡”æ¥*/},{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*å°è¡”æ¥*/},{2,Teble,One_TWO_Beat} ,
+	//{1,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},{0,Alto,184 /*å°è¡”æ¥*/},{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{0,Alto,184 /*å°è¡”æ¥*/},
+	//{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*å°è¡”æ¥*/},{2,Teble,One_TWO_Beat} ,{1,Teble,One_FOUR_Beat},{0,Alto,184 /*å°è¡”æ¥*/},{1,Teble,One_FOUR_Beat},
+	{3,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*å°è¡”æ¥*/},
 	{2,Teble,One_TWO_Beat} ,{1,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},
-	{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{2,Teble,One_TWO_Beat} ,{1,Teble,One_FOUR_Beat},
-	{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{1,Teble,One_FOUR_Beat},
+	{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*å°è¡”æ¥*/},{2,Teble,One_TWO_Beat} ,{1,Teble,One_FOUR_Beat},
+	{0,Alto,184 /*å°è¡”æ¥*/},{1,Teble,One_FOUR_Beat},
 	
-	//µÚ¶şÊ®¾ÅĞ¡½Ú
+	//ç¬¬äºŒåä¹å°èŠ‚
 	{1,Teble,One_TWO_Beat}  ,{0,Alto,One_FOUR_Beat} ,{0,Alto,One_TWO_Beat}  ,{0,Alto,One_TWO_Beat}  ,
-	{5,Teble,One_FOUR_Beat},{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{5,Teble,One_FOUR_Beat},
+	{5,Teble,One_FOUR_Beat},{0,Alto,184 /*å°è¡”æ¥*/},{5,Teble,One_FOUR_Beat},
 	
-	//µÚÈıÊ®Ğ¡½Ú
-	//{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{2,Teble,One_TWO_Beat} ,
-	//{1,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},
-	//{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{2,Teble,One_TWO_Beat} ,{1,Teble,One_FOUR_Beat},{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{1,Teble,One_FOUR_Beat},
-	{3,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},
+	//ç¬¬ä¸‰åå°èŠ‚
+	//{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{0,Alto,184 /*å°è¡”æ¥*/},{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*å°è¡”æ¥*/},{2,Teble,One_TWO_Beat} ,
+	//{1,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},{0,Alto,184 /*å°è¡”æ¥*/},{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{0,Alto,184 /*å°è¡”æ¥*/},
+	//{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*å°è¡”æ¥*/},{2,Teble,One_TWO_Beat} ,{1,Teble,One_FOUR_Beat},{0,Alto,184 /*å°è¡”æ¥*/},{1,Teble,One_FOUR_Beat},
+	{3,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*å°è¡”æ¥*/},
 	{2,Teble,One_TWO_Beat} ,{1,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},
-	{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{2,Teble,One_TWO_Beat} ,{1,Teble,One_FOUR_Beat},
-	{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{1,Teble,One_FOUR_Beat},
+	{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*å°è¡”æ¥*/},{2,Teble,One_TWO_Beat} ,{1,Teble,One_FOUR_Beat},
+	{0,Alto,184 /*å°è¡”æ¥*/},{1,Teble,One_FOUR_Beat},
 	
-	//µÚÈıÊ®Ò»Ğ¡½Ú
+	//ç¬¬ä¸‰åä¸€å°èŠ‚
 	{1,Teble,One_TWO_Beat} ,{0,Alto,One_Beat}      ,{0,Alto,One_Beat}      ,{0,Alto,One_Beat}      ,
 //	
-//	//µÚÈıÊ®¶şĞ¡½Ú
+//	//ç¬¬ä¸‰åäºŒå°èŠ‚
 //	{0,Alto,One_Beat}      ,{0,Alto,One_Beat}      ,{0,Alto,One_Beat}      ,{0,Alto,One_Beat}      ,
 //	
-//	//µÚÈıÊ®ÈıĞ¡½Ú
+//	//ç¬¬ä¸‰åä¸‰å°èŠ‚
 //	{0,Alto,One_Beat}      ,{0,Alto,One_Beat}      ,{0,Alto,One_Beat}      ,{0,Alto,One_Beat}      ,
 	
-	//µÚÈıÊ®ËÄĞ¡½Ú
+	//ç¬¬ä¸‰åå››å°èŠ‚
 	{0,Alto,One_Beat}      ,{0,Alto,One_Beat}      ,{0,Alto,One_Beat}      ,{0,Alto,One_TWO_Beat}  ,
 	{6,Teble,One_FOUR_Beat},{5,Alto,One_FOUR_Beat} ,
 	
-	//µÚÈıÊ®ÎåĞ¡½Ú
+	//ç¬¬ä¸‰åäº”å°èŠ‚
 	{6,Alto,One_TWO_Beat}  ,{5,Alto,One_FOUR_Beat} ,{6,Alto,One_FOUR_Beat} ,{5,Alto,One_FOUR_Beat} ,
-	{6,Alto,One_FOUR_Beat} ,{5,Alto,One_FOUR_Beat} ,{6,Alto,One_TWO_Beat}  ,{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},
+	{6,Alto,One_FOUR_Beat} ,{5,Alto,One_FOUR_Beat} ,{6,Alto,One_TWO_Beat}  ,{0,Alto,184 /*å°è¡”æ¥*/},
 	{6,Alto,One_FOUR_Beat} ,{5,Alto,One_FOUR_Beat} ,{6,Alto,One_FOUR_Beat} ,{5,Alto,One_FOUR_Beat} ,
 	{6,Alto,One_FOUR_Beat} ,{5,Alto,One_FOUR_Beat} ,
 	
-	//µÚÈıÊ®ÁùĞ¡½Ú
+	//ç¬¬ä¸‰åå…­å°èŠ‚
 //	{3,Alto,One_FOUR_Beat} ,{3,Alto,One_TWO_Beat}  ,{3,Alto,One_Beat}       ,{0,Alto,One_Beat}     ,
 //	{0,Alto,One_TWO_Beat}  ,{6,Alto,One_FOUR_Beat} ,{5,Alto,One_FOUR_Beat}  ,
 	{3,Alto,One_TWO_Beat}  ,{3,Alto,One_Beat}      ,{0,Alto,One_Beat}      ,
 	{0,Alto,One_TWO_Beat}  ,{6,Alto,One_FOUR_Beat} ,{5,Alto,One_FOUR_Beat} ,
 	
-	//µÚÈıÊ®ÆßĞ¡½Ú
+	//ç¬¬ä¸‰åä¸ƒå°èŠ‚
 	{6,Alto,One_TWO_Beat}  ,{5,Alto,One_FOUR_Beat} ,{6,Alto,One_FOUR_Beat} ,{5,Alto,One_FOUR_Beat} ,
-	{6,Alto,One_FOUR_Beat} ,{5,Alto,One_FOUR_Beat} ,{7,Alto,One_TWO_Beat}  ,{0,Alto,184 /*Ğ¡ÏÎ½Ó*/} ,
-	{7,Alto,One_FOUR_Beat} ,{0,Alto,184 /*Ğ¡ÏÎ½Ó*/} ,{7,Alto,One_FOUR_Beat} ,{6,Alto,One_FOUR_Beat} ,
+	{6,Alto,One_FOUR_Beat} ,{5,Alto,One_FOUR_Beat} ,{7,Alto,One_TWO_Beat}  ,{0,Alto,184 /*å°è¡”æ¥*/} ,
+	{7,Alto,One_FOUR_Beat} ,{0,Alto,184 /*å°è¡”æ¥*/} ,{7,Alto,One_FOUR_Beat} ,{6,Alto,One_FOUR_Beat} ,
 	{7,Alto,One_FOUR_Beat} ,{6,Alto,One_FOUR_Beat} ,
 
-	//µÚÈıÊ®°ËĞ¡½Ú
+	//ç¬¬ä¸‰åå…«å°èŠ‚
 //	{3,Alto,One_FOUR_Beat} ,{3,Alto,One_TWO_Beat}  ,{3,Alto,One_Beat}  ,{0,Alto,One_Beat}  ,
 //	{0,Alto,One_FOUR_Beat},{3,Alto,One_FOUR_Beat}  ,{5,Alto,One_FOUR_Beat} ,{3,Alto,One_FOUR_Beat} ,
 	{3,Alto,One_TWO_Beat}  ,{3,Alto,One_Beat}  ,{0,Alto,One_Beat}  ,{0,Alto,One_FOUR_Beat},
 	{3,Alto,One_FOUR_Beat}  ,{5,Alto,One_FOUR_Beat} ,{3,Alto,One_FOUR_Beat} ,
 	
 	
-	//µÚÈıÊ®¾ÅĞ¡½Ú
+	//ç¬¬ä¸‰åä¹å°èŠ‚
 	{2,Alto,One_TWO_Beat}  ,{3,Alto,One_FOUR_Beat},{2,Alto,One_TWO_Beat}   ,{3,Alto,One_FOUR_Beat} ,
 	{2,Alto,One_TWO_Beat}  ,{3,Alto,One_FOUR_Beat},{5,Alto,One_FOUR_Beat}  ,{3,Alto,One_FOUR_Beat} ,
 	{5,Alto,One_FOUR_Beat} ,{3,Alto,One_FOUR_Beat},
 	
 	
-	//µÚËÄÊ®Ğ¡½Ú
+	//ç¬¬å››åå°èŠ‚
 	{2,Alto,One_TWO_Beat}  ,{3,Alto,One_FOUR_Beat},{2,Alto,One_TWO_Beat}   ,{3,Alto,One_FOUR_Beat} ,
 	{2,Alto,One_Beat}      ,{0,Alto,One_TWO_Beat} ,{1,Alto,One_FOUR_Beat}  ,{2,Alto,One_FOUR_Beat} ,
 	
 	
 	
 	
-	//µÚËÄÊ®Ò»Ğ¡½Ú
+	//ç¬¬å››åä¸€å°èŠ‚
 	{3,Alto,One_TWO_Beat}  ,{6,Alto,One_TWO_Beat} ,{1,Teble,One_TWO_Beat}   ,{3,Teble,One_TWO_Beat}  ,
 	{2,Teble,One_TWO_Beat}  ,{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat}  ,{1,Teble,One_FOUR_Beat} ,
 	{1,Teble,One_TWO_Beat}  ,
 	
-	//µÚËÄÊ®¶şĞ¡½Ú
+	//ç¬¬å››åäºŒå°èŠ‚
 	{6,Alto,One_Beat}  ,{0,Alto,One_Beat} ,{0,Alto,One_Beat}   ,{0,Alto,One_TWO_Beat}  ,
 	{6,Alto,One_FOUR_Beat}  ,{7,Alto,One_FOUR_Beat},
 	
 	
-	//¿ªÊ¼µÚÒ»±éÑ­»·
-	//µÚ¶şÊ®¶şĞ¡½Ú
+	//å¼€å§‹ç¬¬ä¸€éå¾ªç¯
+	//ç¬¬äºŒåäºŒå°èŠ‚
 	{1,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{7,Alto,One_FOUR_Beat} ,{1,Teble,One_FOUR_Beat},
-	{0,Alto,306 /*Ğ¡ÏÎ½Ó*/},{1,Teble,One_TWO_Beat} ,{0,Alto,306 /*Ğ¡ÏÎ½Ó*/},{1,Teble,One_FOUR_Beat},
+	{0,Alto,306 /*å°è¡”æ¥*/},{1,Teble,One_TWO_Beat} ,{0,Alto,306 /*å°è¡”æ¥*/},{1,Teble,One_FOUR_Beat},
 	{7,Alto,One_FOUR_Beat} ,{1,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{7,Alto,One_FOUR_Beat} ,
-	{1,Teble,One_FOUR_Beat},{0,Alto,306 /*Ğ¡ÏÎ½Ó*/},{1,Teble,One_TWO_Beat} ,{0,Alto,306 /*Ğ¡ÏÎ½Ó*/},
+	{1,Teble,One_FOUR_Beat},{0,Alto,306 /*å°è¡”æ¥*/},{1,Teble,One_TWO_Beat} ,{0,Alto,306 /*å°è¡”æ¥*/},
 	{1,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},
 	
-	//µÚ¶şÊ®ÈıĞ¡½Ú
+	//ç¬¬äºŒåä¸‰å°èŠ‚
 	{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},
-	{3,Teble,One_TWO_Beat} ,{0,Alto,306 /*Ğ¡ÏÎ½Ó*/},{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},
+	{3,Teble,One_TWO_Beat} ,{0,Alto,306 /*å°è¡”æ¥*/},{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},
 	{3,Teble,One_TWO_Beat} ,{5,Teble,One_TWO_Beat} ,{3,Teble,One_TWO_Beat} ,{6,Alto,One_FOUR_Beat} ,
 	{7,Alto,One_FOUR_Beat} ,
 	
-	//µÚ¶şÊ®ËÄĞ¡½Ú
+	//ç¬¬äºŒåå››å°èŠ‚
 	{1,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{7,Alto,One_FOUR_Beat} ,{1,Teble,One_FOUR_Beat},
-	{0,Alto,306 /*Ğ¡ÏÎ½Ó*/},{1,Teble,One_TWO_Beat} ,{0,Alto,306 /*Ğ¡ÏÎ½Ó*/},{1,Teble,One_FOUR_Beat},
+	{0,Alto,306 /*å°è¡”æ¥*/},{1,Teble,One_TWO_Beat} ,{0,Alto,306 /*å°è¡”æ¥*/},{1,Teble,One_FOUR_Beat},
 	{7,Alto,One_FOUR_Beat} ,{1,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{7,Alto,One_FOUR_Beat} ,
-	{1,Teble,One_FOUR_Beat},{0,Alto,306 /*Ğ¡ÏÎ½Ó*/},{1,Teble,One_TWO_Beat} ,{0,Alto,306 /*Ğ¡ÏÎ½Ó*/},
+	{1,Teble,One_FOUR_Beat},{0,Alto,306 /*å°è¡”æ¥*/},{1,Teble,One_TWO_Beat} ,{0,Alto,306 /*å°è¡”æ¥*/},
 	{1,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},
 	
-	//µÚ¶şÊ®ÎåĞ¡½Ú
+	//ç¬¬äºŒåäº”å°èŠ‚
 	{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},
-	{3,Teble,One_TWO_Beat} ,{0,Alto,306 /*Ğ¡ÏÎ½Ó*/},{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},
+	{3,Teble,One_TWO_Beat} ,{0,Alto,306 /*å°è¡”æ¥*/},{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},
 	{3,Teble,One_TWO_Beat} ,{5,Teble,One_TWO_Beat} ,{3,Teble,One_TWO_Beat} ,{5,Teble,One_TWO_Beat} ,
 	
-	//µÚ¶şÊ®ÁùĞ¡½Ú
+	//ç¬¬äºŒåå…­å°èŠ‚
 	{3,Teble,One_TWO_Beat} ,{5,Teble,One_FOUR_Beat},{3,Teble,One_TWO_Beat} ,{5,Teble,One_FOUR_Beat},
 	{3,Teble,One_FOUR_Beat},{5,Teble,One_FOUR_Beat},{6,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},
-	{5,Teble,One_TWO_Beat} ,{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{5,Teble,One_TWO_Beat} ,
+	{5,Teble,One_TWO_Beat} ,{0,Alto,184 /*å°è¡”æ¥*/},{5,Teble,One_TWO_Beat} ,
 	
-	//µÚ¶şÊ®ÆßĞ¡½Ú
+	//ç¬¬äºŒåä¸ƒå°èŠ‚
 	{3,Teble,One_TWO_Beat} ,{5,Teble,One_FOUR_Beat},{3,Teble,One_TWO_Beat} ,{5,Teble,One_FOUR_Beat},
 	{3,Teble,One_FOUR_Beat},{5,Teble,One_FOUR_Beat},{6,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},
-	{5,Teble,One_TWO_Beat} ,{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{5,Teble,One_TWO_Beat} ,{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},
+	{5,Teble,One_TWO_Beat} ,{0,Alto,184 /*å°è¡”æ¥*/},{5,Teble,One_TWO_Beat} ,{0,Alto,184 /*å°è¡”æ¥*/},
 	{5,Teble,One_TWO_Beat} ,
 	
-	//µÚ¶şÊ®°ËĞ¡½Ú
-	//{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{2,Teble,One_TWO_Beat} ,
-	//{1,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},
-	//{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{2,Teble,One_TWO_Beat} ,{1,Teble,One_FOUR_Beat},{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{1,Teble,One_FOUR_Beat},
-	{3,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},
+	//ç¬¬äºŒåå…«å°èŠ‚
+	//{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{0,Alto,184 /*å°è¡”æ¥*/},{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*å°è¡”æ¥*/},{2,Teble,One_TWO_Beat} ,
+	//{1,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},{0,Alto,184 /*å°è¡”æ¥*/},{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{0,Alto,184 /*å°è¡”æ¥*/},
+	//{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*å°è¡”æ¥*/},{2,Teble,One_TWO_Beat} ,{1,Teble,One_FOUR_Beat},{0,Alto,184 /*å°è¡”æ¥*/},{1,Teble,One_FOUR_Beat},
+	{3,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*å°è¡”æ¥*/},
 	{2,Teble,One_TWO_Beat} ,{1,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},
-	{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{2,Teble,One_TWO_Beat} ,{1,Teble,One_FOUR_Beat},
-	{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{1,Teble,One_FOUR_Beat},
+	{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*å°è¡”æ¥*/},{2,Teble,One_TWO_Beat} ,{1,Teble,One_FOUR_Beat},
+	{0,Alto,184 /*å°è¡”æ¥*/},{1,Teble,One_FOUR_Beat},
 	
-	//µÚ¶şÊ®¾ÅĞ¡½Ú
+	//ç¬¬äºŒåä¹å°èŠ‚
 	{1,Teble,One_TWO_Beat}  ,{0,Alto,One_FOUR_Beat} ,{0,Alto,One_TWO_Beat}  ,{0,Alto,One_TWO_Beat}  ,
-	{5,Teble,One_FOUR_Beat},{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{5,Teble,One_FOUR_Beat},
+	{5,Teble,One_FOUR_Beat},{0,Alto,184 /*å°è¡”æ¥*/},{5,Teble,One_FOUR_Beat},
 	
-	//µÚÈıÊ®Ğ¡½Ú
-	//{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{2,Teble,One_TWO_Beat} ,
-	//{1,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},
-	//{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{2,Teble,One_TWO_Beat} ,{1,Teble,One_FOUR_Beat},{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{1,Teble,One_FOUR_Beat},
-	{3,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},
+	//ç¬¬ä¸‰åå°èŠ‚
+	//{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{0,Alto,184 /*å°è¡”æ¥*/},{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*å°è¡”æ¥*/},{2,Teble,One_TWO_Beat} ,
+	//{1,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},{0,Alto,184 /*å°è¡”æ¥*/},{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{0,Alto,184 /*å°è¡”æ¥*/},
+	//{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*å°è¡”æ¥*/},{2,Teble,One_TWO_Beat} ,{1,Teble,One_FOUR_Beat},{0,Alto,184 /*å°è¡”æ¥*/},{1,Teble,One_FOUR_Beat},
+	{3,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*å°è¡”æ¥*/},
 	{2,Teble,One_TWO_Beat} ,{1,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},
-	{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{2,Teble,One_TWO_Beat} ,{1,Teble,One_FOUR_Beat},
-	{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{1,Teble,One_FOUR_Beat},
+	{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*å°è¡”æ¥*/},{2,Teble,One_TWO_Beat} ,{1,Teble,One_FOUR_Beat},
+	{0,Alto,184 /*å°è¡”æ¥*/},{1,Teble,One_FOUR_Beat},
 	
-	//µÚÒ»±éÑ­»·½áÊø
+	//ç¬¬ä¸€éå¾ªç¯ç»“æŸ
 	
-	//µÚËÄÊ®ÈıĞ¡½Ú
+	//ç¬¬å››åä¸‰å°èŠ‚
 	{6,Alto,One_TWO_Beat}  ,{6,Alto,One_TWO_Beat} ,{1,Alto,One_TWO_Beat}  ,{3,Alto,One_TWO_Beat}  ,
-	{7,Alto,One_Beat},{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{7,Alto,One_TWO_Beat},{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},
-	{7,Alto,One_FOUR_Beat},{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{7,Alto,One_FOUR_Beat},
+	{7,Alto,One_Beat},{0,Alto,184 /*å°è¡”æ¥*/},{7,Alto,One_TWO_Beat},{0,Alto,184 /*å°è¡”æ¥*/},
+	{7,Alto,One_FOUR_Beat},{0,Alto,184 /*å°è¡”æ¥*/},{7,Alto,One_FOUR_Beat},
 	
-	//µÚËÄÊ®ËÄĞ¡½Ú
+	//ç¬¬å››åå››å°èŠ‚
 	//{6,Alto,One_FOUR_Beat}  ,{6,Alto,One_TWO_Beat} ,{6,Alto,One_Beat}  ,{0,Alto,One_Beat}  ,
 	//{0,Alto,One_Beat},{0,Alto,One_Beat},
 	{6,Alto,One_TWO_Beat} ,{6,Alto,One_TWO_Beat} ,{6,Alto,One_TWO_Beat} ,{0,Alto,One_Beat}  ,
 	{0,Alto,One_Beat},{0,Alto,One_Beat},
 	
-	//µÚËÄÊ®ÎåĞ¡½Ú
+	//ç¬¬å››åäº”å°èŠ‚
 	{6,Alto,One_TWO_Beat}  ,{6,Alto,One_TWO_Beat} ,{1,Alto,One_TWO_Beat}  ,{3,Alto,One_TWO_Beat}  ,
-	{7,Alto,One_Beat},{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{7,Alto,One_TWO_Beat},{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},
-	{7,Alto,One_FOUR_Beat},{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{7,Alto,One_FOUR_Beat},
+	{7,Alto,One_Beat},{0,Alto,184 /*å°è¡”æ¥*/},{7,Alto,One_TWO_Beat},{0,Alto,184 /*å°è¡”æ¥*/},
+	{7,Alto,One_FOUR_Beat},{0,Alto,184 /*å°è¡”æ¥*/},{7,Alto,One_FOUR_Beat},
 	
-	//µÚËÄÊ®ÁùĞ¡½Ú
+	//ç¬¬å››åå…­å°èŠ‚
 	{7,Alto,One_FOUR_Beat},{6,Alto,One_TWO_Beat},{6,Alto,One_Beat} ,{0,Alto,One_Beat},
 	{0,Alto,One_TWO_Beat},{6,Alto,One_FOUR_Beat} ,{7,Alto,One_FOUR_Beat},
 	
 	
-	//µÚ¶ş´ÎÑ­»·
-	//µÚ¶şÊ®¶şĞ¡½Ú
+	//ç¬¬äºŒæ¬¡å¾ªç¯
+	//ç¬¬äºŒåäºŒå°èŠ‚
 	{1,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{7,Alto,One_FOUR_Beat} ,{1,Teble,One_FOUR_Beat},
-	{0,Alto,306 /*Ğ¡ÏÎ½Ó*/},{1,Teble,One_TWO_Beat} ,{0,Alto,306 /*Ğ¡ÏÎ½Ó*/},{1,Teble,One_FOUR_Beat},
+	{0,Alto,306 /*å°è¡”æ¥*/},{1,Teble,One_TWO_Beat} ,{0,Alto,306 /*å°è¡”æ¥*/},{1,Teble,One_FOUR_Beat},
 	{7,Alto,One_FOUR_Beat} ,{1,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{7,Alto,One_FOUR_Beat} ,
-	{1,Teble,One_FOUR_Beat},{0,Alto,306 /*Ğ¡ÏÎ½Ó*/},{1,Teble,One_TWO_Beat} ,{0,Alto,306 /*Ğ¡ÏÎ½Ó*/},
+	{1,Teble,One_FOUR_Beat},{0,Alto,306 /*å°è¡”æ¥*/},{1,Teble,One_TWO_Beat} ,{0,Alto,306 /*å°è¡”æ¥*/},
 	{1,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},
 	
-	//µÚ¶şÊ®ÈıĞ¡½Ú
+	//ç¬¬äºŒåä¸‰å°èŠ‚
 	{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},
-	{3,Teble,One_TWO_Beat} ,{0,Alto,306 /*Ğ¡ÏÎ½Ó*/},{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},
+	{3,Teble,One_TWO_Beat} ,{0,Alto,306 /*å°è¡”æ¥*/},{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},
 	{3,Teble,One_TWO_Beat} ,{5,Teble,One_TWO_Beat} ,{3,Teble,One_TWO_Beat} ,{6,Alto,One_FOUR_Beat} ,
 	{7,Alto,One_FOUR_Beat} ,
 	
-	//µÚ¶şÊ®ËÄĞ¡½Ú
+	//ç¬¬äºŒåå››å°èŠ‚
 	{1,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{7,Alto,One_FOUR_Beat} ,{1,Teble,One_FOUR_Beat},
-	{0,Alto,306 /*Ğ¡ÏÎ½Ó*/},{1,Teble,One_TWO_Beat} ,{0,Alto,306 /*Ğ¡ÏÎ½Ó*/},{1,Teble,One_FOUR_Beat},
+	{0,Alto,306 /*å°è¡”æ¥*/},{1,Teble,One_TWO_Beat} ,{0,Alto,306 /*å°è¡”æ¥*/},{1,Teble,One_FOUR_Beat},
 	{7,Alto,One_FOUR_Beat} ,{1,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{7,Alto,One_FOUR_Beat} ,
-	{1,Teble,One_FOUR_Beat},{0,Alto,306 /*Ğ¡ÏÎ½Ó*/},{1,Teble,One_TWO_Beat} ,{0,Alto,306 /*Ğ¡ÏÎ½Ó*/},
+	{1,Teble,One_FOUR_Beat},{0,Alto,306 /*å°è¡”æ¥*/},{1,Teble,One_TWO_Beat} ,{0,Alto,306 /*å°è¡”æ¥*/},
 	{1,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},
 	
-	//µÚ¶şÊ®ÎåĞ¡½Ú
+	//ç¬¬äºŒåäº”å°èŠ‚
 	{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},
-	{3,Teble,One_TWO_Beat} ,{0,Alto,306 /*Ğ¡ÏÎ½Ó*/},{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},
+	{3,Teble,One_TWO_Beat} ,{0,Alto,306 /*å°è¡”æ¥*/},{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},
 	{3,Teble,One_TWO_Beat} ,{5,Teble,One_TWO_Beat} ,{3,Teble,One_TWO_Beat} ,{5,Teble,One_TWO_Beat} ,
 	
-	//µÚ¶şÊ®ÁùĞ¡½Ú
+	//ç¬¬äºŒåå…­å°èŠ‚
 	{3,Teble,One_TWO_Beat} ,{5,Teble,One_FOUR_Beat},{3,Teble,One_TWO_Beat} ,{5,Teble,One_FOUR_Beat},
 	{3,Teble,One_FOUR_Beat},{5,Teble,One_FOUR_Beat},{6,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},
-	{5,Teble,One_TWO_Beat} ,{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{5,Teble,One_TWO_Beat} ,
+	{5,Teble,One_TWO_Beat} ,{0,Alto,184 /*å°è¡”æ¥*/},{5,Teble,One_TWO_Beat} ,
 	
-	//µÚ¶şÊ®ÆßĞ¡½Ú
+	//ç¬¬äºŒåä¸ƒå°èŠ‚
 	{3,Teble,One_TWO_Beat} ,{5,Teble,One_FOUR_Beat},{3,Teble,One_TWO_Beat} ,{5,Teble,One_FOUR_Beat},
 	{3,Teble,One_FOUR_Beat},{5,Teble,One_FOUR_Beat},{6,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},
-	{5,Teble,One_TWO_Beat} ,{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{5,Teble,One_TWO_Beat} ,{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},
+	{5,Teble,One_TWO_Beat} ,{0,Alto,184 /*å°è¡”æ¥*/},{5,Teble,One_TWO_Beat} ,{0,Alto,184 /*å°è¡”æ¥*/},
 	{5,Teble,One_TWO_Beat} ,
 	
-	//µÚ¶şÊ®°ËĞ¡½Ú
-	//{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{2,Teble,One_TWO_Beat} ,
-	//{1,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},
-	//{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{2,Teble,One_TWO_Beat} ,{1,Teble,One_FOUR_Beat},{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{1,Teble,One_FOUR_Beat},
-	{3,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},
+	//ç¬¬äºŒåå…«å°èŠ‚
+	//{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{0,Alto,184 /*å°è¡”æ¥*/},{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*å°è¡”æ¥*/},{2,Teble,One_TWO_Beat} ,
+	//{1,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},{0,Alto,184 /*å°è¡”æ¥*/},{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{0,Alto,184 /*å°è¡”æ¥*/},
+	//{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*å°è¡”æ¥*/},{2,Teble,One_TWO_Beat} ,{1,Teble,One_FOUR_Beat},{0,Alto,184 /*å°è¡”æ¥*/},{1,Teble,One_FOUR_Beat},
+	{3,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*å°è¡”æ¥*/},
 	{2,Teble,One_TWO_Beat} ,{1,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},
-	{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{2,Teble,One_TWO_Beat} ,{1,Teble,One_FOUR_Beat},
-	{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{1,Teble,One_FOUR_Beat},
+	{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*å°è¡”æ¥*/},{2,Teble,One_TWO_Beat} ,{1,Teble,One_FOUR_Beat},
+	{0,Alto,184 /*å°è¡”æ¥*/},{1,Teble,One_FOUR_Beat},
 	
-	//µÚ¶şÊ®¾ÅĞ¡½Ú
+	//ç¬¬äºŒåä¹å°èŠ‚
 	{1,Teble,One_TWO_Beat}  ,{0,Alto,One_FOUR_Beat} ,{0,Alto,One_TWO_Beat}  ,{0,Alto,One_TWO_Beat}  ,
-	{5,Teble,One_FOUR_Beat},{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{5,Teble,One_FOUR_Beat},
+	{5,Teble,One_FOUR_Beat},{0,Alto,184 /*å°è¡”æ¥*/},{5,Teble,One_FOUR_Beat},
 	
-	//µÚÈıÊ®Ğ¡½Ú
-	//{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{2,Teble,One_TWO_Beat} ,
-	//{1,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},
-	//{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{2,Teble,One_TWO_Beat} ,{1,Teble,One_FOUR_Beat},{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{1,Teble,One_FOUR_Beat},
-	{3,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},
+	//ç¬¬ä¸‰åå°èŠ‚
+	//{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{0,Alto,184 /*å°è¡”æ¥*/},{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*å°è¡”æ¥*/},{2,Teble,One_TWO_Beat} ,
+	//{1,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},{0,Alto,184 /*å°è¡”æ¥*/},{3,Teble,One_FOUR_Beat},{2,Teble,One_FOUR_Beat},{0,Alto,184 /*å°è¡”æ¥*/},
+	//{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*å°è¡”æ¥*/},{2,Teble,One_TWO_Beat} ,{1,Teble,One_FOUR_Beat},{0,Alto,184 /*å°è¡”æ¥*/},{1,Teble,One_FOUR_Beat},
+	{3,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*å°è¡”æ¥*/},
 	{2,Teble,One_TWO_Beat} ,{1,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},{3,Teble,One_FOUR_Beat},
-	{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{2,Teble,One_TWO_Beat} ,{1,Teble,One_FOUR_Beat},
-	{0,Alto,184 /*Ğ¡ÏÎ½Ó*/},{1,Teble,One_FOUR_Beat},
+	{2,Teble,One_TWO_Beat} ,{0,Alto,184 /*å°è¡”æ¥*/},{2,Teble,One_TWO_Beat} ,{1,Teble,One_FOUR_Beat},
+	{0,Alto,184 /*å°è¡”æ¥*/},{1,Teble,One_FOUR_Beat},
 
-	//µÚ¶ş´ÎÑ­»·½áÊø
+	//ç¬¬äºŒæ¬¡å¾ªç¯ç»“æŸ
 	
-	//µÚËÄÊ®ÆßĞ¡½Ú
+	//ç¬¬å››åä¸ƒå°èŠ‚
 	{1,Teble,One_TWO_Beat} ,{0,Alto,One_Beat}      ,{0,Alto,One_Beat}      ,{0,Alto,One_Beat}      ,
 	
 	
@@ -508,7 +505,7 @@ uint16_t Music_Lone_Brave[][3]={
 
 /**
   * @Function name  MUSIC_Begin
-  * @Introduce  		¿ªÊ¼²¥·ÅÒôÀÖ						
+  * @Introduce  		å¼€å§‹æ’­æ”¾éŸ³ä¹						
   * @Return 				NULL
   */
 	void MUSIC_Analysis(void){
